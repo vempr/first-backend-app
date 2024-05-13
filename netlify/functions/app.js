@@ -3,10 +3,10 @@ const serverless = require("serverless-http");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 
-const indexRoute = require("./routes/index");
-const newRoute = require("./routes/new");
-const aboutRoute = require("./routes/about");
-const notFoundRoute = require("./routes/notFound");
+const indexRoute = require("../../routes/index");
+const newRoute = require("../../routes/new");
+const aboutRoute = require("../../routes/about");
+const notFoundRoute = require("../../routes/notFound");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
