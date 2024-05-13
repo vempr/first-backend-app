@@ -1,4 +1,5 @@
 const express = require("express");
+const serverless = require("serverless-http");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const jsonfile = require("jsonfile");
@@ -60,3 +61,5 @@ process.on("uncaughtException", (err) => {
   console.log("UNCAUGHT ERROR:", err);
   process.exit(1);
 });
+
+module.exports.handler = serverless;
