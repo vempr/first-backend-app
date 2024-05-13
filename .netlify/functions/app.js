@@ -6,7 +6,7 @@ const morgan = require("morgan");
 const indexRoute = require("../../routes/index");
 const newRoute = require("../../routes/new");
 const aboutRoute = require("../../routes/about");
-const notFoundRoute = require("../../routes/notFound");
+const notFoundRoute = require("../../routes/nf");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -19,14 +19,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(morgan("dev"));
 
-app.use("/", indexRoute);
-app.use("/new", newRoute);
-app.use("/about", aboutRoute);
+app.use("/app/", indexRoute);
+app.use("/app/new", newRoute);
+app.use("/app/about", aboutRoute);
 app.use(notFoundRoute);
 
-process.on("uncaughtException", (err) => {
-  console.log("UNCAUGHT ERROR:", err);
-  process.exit(1);
-});
-
-module.exports.handler = serverless;
+module.exports.handler = serverless(app);
