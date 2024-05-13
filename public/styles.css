@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav > ul {
+  display: flex;
+}
+
+nav > ul > li {
+  list-style-type: none;
+  margin-left: 1rem;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+form > div > label {
+  font-weight: bold;
+}
+
+form > div > input,
+form > div > textarea {
+  font-family: inherit;
+  padding: 0.5rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 4rem;
+}
+
+form > button {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  font-size: large;
+  font-weight: bold;
+}
+
+footer {
+  font-style: italic;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<body>
+  <%- include("./partials/header.ejs") %>
+  <main>
+    <% blogs.map((blog) => { %>
+      <div>
+        <h2 style="margin:0;"><%- blog.title %></h2>
+        <p style="font-style:italic;">by <%- blog.author %></p>
+        <p><%- blog.content %></p>
+      </div>
+    <% }) %>
+  </main>
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

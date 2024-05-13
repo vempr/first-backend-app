@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<body>
+  <%- include("./partials/header.ejs") %>
+  <main class="form-container">
+    <form id="form" action="/new-blog/" method="post">
+      <div>
+        <label for="author">Author</label>
+        <input
+          id="author"
+          name="author"
+          type="text"
+          placeholder="bobby8"
+          required
+          autocomplete="off"
+        >
+      </div>
+      <div>
+        <label for="title">Title</label>
+        <input
+          id="title"
+          name="title"
+          type="text"
+          placeholder="My Favorite Movie"
+          required
+          autocomplete="off"
+        >
+      </div>
+      <div>
+        <label for="content">Content</label>
+        <textarea
+          id="content"
+          name="content"
+          type="text"
+          placeholder="It has to be..."
+          required
+          autocomplete="off"
+        ></textarea>
+      </div>
+      <button type="submit">Post Blog</button>
+    </form>
+  </main>
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>
